@@ -147,17 +147,24 @@ footer {
 # =========================
 # GNPA
 # =========================
+
 st.markdown(
     '<div style="font-size:24px; font-weight:800; color:#2F765D; '
     'letter-spacing:6px; margin-top:28px; margin-bottom:6px;">'
     'GNPA'
     '</div>'
     '<div style="font-size:14px; font-weight:600; color:#123047; '
-    'letter-spacing:1.6px; text-transform:uppercase; margin-bottom:34px;">'
-    '全球自然與植物性飲食轉型機構'
+    'letter-spacing:1.6px; text-transform:uppercase; margin-bottom:5px;">'
+    'Global Nature & Plant-based Diet Shift Agency'
+    '</div>'
+    '<div style="font-size:13px; font-weight:500; color:#68757D; '
+    'letter-spacing:0.5px; margin-bottom:34px;">'
+    '全球自然與植物性飲食轉型總署'
     '</div>',
     unsafe_allow_html=True
 )
+
+
 
 # =========================
 # ABOUT GNPA
