@@ -147,44 +147,41 @@ footer {
 # =========================
 # GNPA
 # =========================
-
 st.markdown(
     '<div style="font-size:24px; font-weight:800; color:#2F765D; '
     'letter-spacing:6px; margin-top:28px; margin-bottom:6px;">'
     'GNPA'
     '</div>'
     '<div style="font-size:14px; font-weight:600; color:#123047; '
-    'letter-spacing:1.6px; text-transform:uppercase; margin-bottom:5px;">'
-    'Global Nature & Plant-based Diet Shift Agency'
-    '</div>'
-    '<div style="font-size:13px; font-weight:500; color:#68757D; '
-    'letter-spacing:0.5px; margin-bottom:34px;">'
-    '全球自然與植物性飲食轉型總署'
+    'letter-spacing:1.6px; text-transform:uppercase; margin-bottom:34px;">'
+    'Global Nature & Plant-based 飲食轉型 Agency'
     '</div>',
     unsafe_allow_html=True
 )
 
-
-
 # =========================
-# ABOUT GNPA
+# 關於 GNPA
 # =========================
 
 with st.expander("關於 GNPA"):
     st.markdown(
         """
-**全球自然與植物性飲食轉型機構 (GNPA)**
+**Global Nature & Plant-based 飲食轉型 Agency (GNPA)**  
+**全球自然與植物性飲食轉型總署**
 
-GNPA 是一項以研究為核心的倡議，探索食品系統、自然恢復、氣候變遷與實現淨零路徑之間的關係。
+GNPA 是一項以研究為核心的倡議，探索食物系統、自然復育、
+氣候變遷與通往淨零之間的關係。
 
-**MY NET ZERO** 將這項研究轉化為互動式平台，讓個人、各國與全球使用者探索飲食轉型與自然恢復如何影響氣候結果。
+**MY NET ZERO** 將這項研究轉化為互動式平台，
+讓個人、國家與全球使用者探索飲食轉型與自然復育
+如何影響氣候結果。
 
 本平台旨在連結科學研究、公眾理解與政策討論。
         """
     )
 
 # =========================
-# CONTACT / ASK A QUESTION
+# 聯絡我們 / 提出問題
 # =========================
 
 with st.expander("聯絡我們 / 提出問題"):
@@ -192,7 +189,7 @@ with st.expander("聯絡我們 / 提出問題"):
     with st.form("contact_form"):
 
         contact_name = st.text_input("姓名")
-        contact_organization = st.text_input("機構")
+        contact_organization = st.text_input("組織")
         contact_country = st.text_input("國家")
         contact_email = st.text_input("電子郵件")
         contact_message = st.text_area("問題 / 留言")
@@ -203,7 +200,7 @@ with st.expander("聯絡我們 / 提出問題"):
 
         if not contact_name or not contact_email or not contact_message:
             st.warning(
-                "請填寫姓名、電子郵件及問題／留言。"
+                "請填寫您的姓名、電子郵件及問題／留言。"
             )
 
         else:
@@ -237,7 +234,7 @@ with st.expander("聯絡我們 / 提出問題"):
                 )
 
     st.caption(
-        "您的資料僅用於回覆本次詢問。"
+        "您的資料僅用於回覆您的詢問。"
     )
 
 # =========================
@@ -280,7 +277,7 @@ with nav4:
 
 
 # =========================
-# MY NATION SELECTOR
+# 我的國家 SELECTOR
 # =========================
 
 # =========================
@@ -351,7 +348,7 @@ st.markdown(
 )
 
 # =========================
-# BEYOND NET ZERO
+# 超越淨零
 # =========================
 
 if st.session_state.show_beyond:
@@ -375,9 +372,9 @@ if st.session_state.show_beyond:
     st.markdown(
         '<div style="font-size:21px; line-height:1.8; color:#123047; '
         'max-width:850px; margin-bottom:50px;">'
-        '改變不可持續的系統，並不代表放棄未來。<br>'
-        '而是開啟一個更豐盛、更進步、'
-        '也比我們想像中更令人期待的未來。'
+        'Changing an unsustainable system is not about giving up the future.<br>'
+        'It is about unlocking a future more abundant, more advanced, '
+        'and more exciting than we imagined.'
         '</div>',
         unsafe_allow_html=True
     )
@@ -388,7 +385,7 @@ if st.session_state.show_beyond:
         st.markdown("### 糧食安全")
 
     with future2:
-        st.markdown("### 恢復生機的地球")
+        st.markdown("### 復育的地球")
 
     with future3:
         st.markdown("### 氣候穩定")
@@ -397,7 +394,7 @@ if st.session_state.show_beyond:
         st.markdown("### 人類進步")
      
 # =========================
-# FOR ME
+# 我的淨零
 # =========================
 
 if st.session_state.show_for_me:
@@ -410,7 +407,7 @@ if st.session_state.show_for_me:
 
     st.markdown(
         '<div style="color:#2F765D; font-size:15px; font-weight:700; '
-        'letter-spacing:2px; margin-top:25px;">MY NET ZERO 指數</div>',
+        'letter-spacing:2px; margin-top:25px;">MY NET ZERO INDEX</div>',
         unsafe_allow_html=True
     )
 
@@ -428,7 +425,18 @@ if st.session_state.show_for_me:
         unsafe_allow_html=True
     )
     
-
+    st.markdown(
+        '<div style="font-size:14px; line-height:1.6; color:#68757D; '
+        'max-width:760px; margin-top:-15px; margin-bottom:25px;">'
+        '<b>關於這項指數</b><br>'
+        'MY NET ZERO INDEX is a standardized research indicator based on an '
+        '<b>Earth-system accounting framework</b>. Unlike conventional carbon-footprint '
+        'approaches that focus primarily on anthropogenic emissions, this model also '
+        'accounts for the loss and recovery of natural CO₂-removal capacity across '
+        'forests, land and oceans.'
+        '</div>',
+        unsafe_allow_html=True
+    )
     personal1, personal2 = st.columns(2)
 
     with personal1:
@@ -461,7 +469,7 @@ if st.session_state.show_for_me:
         )
         st.markdown(
             '<div class="small-number">'
-            '動物性食品系統'
+            '動物性食物系統'
             '</div>',
             unsafe_allow_html=True
         )
@@ -471,9 +479,34 @@ if st.session_state.show_for_me:
         unsafe_allow_html=True
     )
 
+    with st.expander("這項指數如何計算？"):
+        st.markdown(
+            """
+**MY NET ZERO INDEX** 是一項標準化研究指標。  
+它不是傳統的個人碳足跡計算器。
+
+**日常生活 = 2**  
+能源、交通、烹飪與家電，在本研究模型的標準化氣候負擔中約占 **20%**。
+
+**食物與自然 = 8**  
+其餘 **80%** 代表本研究模型歸因於畜牧相關的氣候負擔，包括食物系統能源使用、土地壓力，以及自然 CO₂ 移除能力的喪失。
+
+**動物性飲食**
+
+**2 + 8 = 10**
+
+因此，動物性飲食基準的 MY NET ZERO INDEX 為 **10**。
+
+**植物性飲食**
+
+**2 − 8 = −6**
+
+在本模型中，飲食轉型可降低畜牧相關壓力，使自然碳匯恢復。負值代表恢復的自然 CO₂ 移除能力對地球系統平衡的貢獻，而不是宣稱個人直接產生負排放。
+            """
+        )
     st.markdown(
         '<div style="color:#2F765D; font-size:15px; font-weight:700; '
-        'letter-spacing:2px;">你的飲食</div>',
+        'letter-spacing:2px;">您的飲食</div>',
         unsafe_allow_html=True
     )
 
@@ -530,7 +563,7 @@ if st.session_state.show_for_me:
                 unsafe_allow_html=True
             )
             st.markdown(
-                '<div class="small-number">畜牧業相關甲烷排放</div>',
+                '<div class="small-number">畜牧相關甲烷排放</div>',
                 unsafe_allow_html=True
             )
 
@@ -590,7 +623,7 @@ if st.session_state.show_for_me:
 
         with change5:
             st.markdown(
-                '<div class="number-title">海洋死亡區恢復</div>',
+                '<div class="number-title">海洋死區恢復</div>',
                 unsafe_allow_html=True
             )
             st.markdown(
@@ -599,7 +632,7 @@ if st.session_state.show_for_me:
                 unsafe_allow_html=True
             )
             st.markdown(
-                '<div class="small-number">死亡區恢復生機，沿海海洋森林重新吸收 CO₂</div>',
+                '<div class="small-number">死區恢復，沿海海洋森林重新吸收 CO₂</div>',
                 unsafe_allow_html=True
             )
 
@@ -614,13 +647,13 @@ if st.session_state.show_for_me:
                 unsafe_allow_html=True
             )
             st.markdown(
-                '<div class="small-number">歸因於畜牧系統的能源使用</div>',
+                '<div class="small-number">歸因於畜牧系統能源使用</div>',
                 unsafe_allow_html=True
             )
 
 if st.session_state.show_nation:
     selected_country = st.selectbox(
-        "選擇你的國家",
+        "選擇您的國家",
         countries
     )
 
@@ -648,7 +681,7 @@ if st.session_state.show_nation:
 
   
     # =========================
-    # NET ZERO SCORE
+    # 淨零評分
     # =========================
 
     ghg_net_zero = selected_row["Net Zero Score --GHG-IPCC"]
@@ -657,7 +690,7 @@ if st.session_state.show_nation:
     st.markdown(
         '<div style="font-size:20px; font-weight:800; color:#2F765D; '
         'letter-spacing:2px; margin-top:40px; margin-bottom:18px;">'
-        '淨零分數'
+        '淨零評分'
         '</div>',
         unsafe_allow_html=True
     )
@@ -704,7 +737,7 @@ if st.session_state.show_nation:
 
     with result1:
         st.markdown(
-            '<div class="number-title">畜牧業 CO₂ 影響</div>',
+            '<div class="number-title">畜牧 CO₂ 影響</div>',
             unsafe_allow_html=True
         )
         st.markdown(
@@ -715,7 +748,7 @@ if st.session_state.show_nation:
 
     with result2:
         st.markdown(
-            '<div class="number-title">畜牧業 GDP 影響</div>',
+            '<div class="number-title">畜牧 GDP 影響</div>',
             unsafe_allow_html=True
         )
         st.markdown(
@@ -730,7 +763,7 @@ if st.session_state.show_nation:
     st.markdown(
         f'<div style="font-size:15px; font-weight:700; color:#2F765D; '
         f'letter-spacing:2px; margin-top:35px;">'
-        f'{selected_region.upper()} — REGIONAL COMPARISON</div>',
+        f'{selected_region.upper()} — 區域比較</div>',
         unsafe_allow_html=True
     )
 
@@ -790,13 +823,13 @@ if st.session_state.show_nation:
 
     st.markdown(
         '<div style="color:#68757D; font-size:13px; margin-top:12px;">'
-        '結果依據 MY NET ZERO 研究模型計算。'
+        '結果依 MY NET ZERO 研究模型計算。'
         '</div>',
         unsafe_allow_html=True
     )
     
     # =========================
-    # KEY NATIONAL MESSAGE
+    # 國家重點訊息
     # =========================
 
     national_message = selected_row["Key national message"]
@@ -829,6 +862,18 @@ st.markdown(
 # =========================
 # NET ZERO FORMULAS
 # =========================
+
+st.markdown(
+    """
+### 兩種淨零核算方式
+
+**傳統淨零**主要問：為了平衡人為造成的排放，需要減少或移除多少人為排放。
+
+**MY NET ZERO** 將核算邊界擴展至地球系統：它同時追問，當森林、土地與海洋承受的壓力降低時，可以恢復多少自然 CO₂ 移除能力。
+
+兩者的差異不只是另一種排放估算，而是**不同的核算邊界**。
+    """
+)
 col1, col2 = st.columns(2)
 
 with col1:
@@ -866,7 +911,7 @@ with col2:
             line-height:1.25;
             white-space:nowrap;
         ">
-            淨零 = 1 − (0.25 − 11.87)
+            Net Zero = 1 − (0.25 − 11.87)
         </div>
 
         <div style="
@@ -893,7 +938,7 @@ with st.expander("為什麼？"):
 
     st.image(
         "net_zero_gap.png.png",
-        caption="圖 1.1　衡量從現況到達氣候成功目標的距離。",
+        caption="圖 1.1　衡量從目前狀態到氣候成功的距離。",
         use_container_width=True
     )
 
@@ -910,13 +955,13 @@ with st.expander("為什麼？"):
 
 **相當於全球排放年數**
 
-593 GtCO₂ ÷ 50 GtCO₂/year ≈ **11.87 years**
+593 GtCO₂ ÷ 50 GtCO₂/年 ≈ **11.87 年**
 
 **MY NET ZERO 模型**
 
 1 − (0.25 − 11.87) ≈ **12.62**
 
-*換算基礎：Poljak（2023），大氣 CO₂ 每 1 ppm 約等於 7.81 GtCO₂。*
+*換算基礎：Poljak（2023），每 1 ppm 大氣 CO₂ 約等於 7.81 GtCO₂。*
 """)
 
 st.markdown(
@@ -926,7 +971,7 @@ st.markdown(
 
 
 # =========================
-# DIET SHIFT
+# 飲食轉型
 # =========================
 st.markdown(
     '<div class="diet-title">飲食轉型</div>',
@@ -955,7 +1000,7 @@ TARGET_PPM = 350.0
 
 co2_reduced = MAX_CO2 * diet_shift / 100
 
-co2_remaining = MAX_CO2 - co2_reduced
+co2_剩餘 = MAX_CO2 - co2_reduced
 
 current_ppm = (
     START_PPM
@@ -975,7 +1020,7 @@ with col3:
 
     st.markdown(
         '<div class="number-title">'
-        'CO₂ 降低'
+        'CO₂ 減量'
         '</div>',
         unsafe_allow_html=True
     )
@@ -989,7 +1034,7 @@ with col3:
 
     st.markdown(
         f'<div class="small-number">'
-        f'{co2_remaining:.1f} 剩餘 GtCO₂'
+        f'{co2_剩餘:.1f} 剩餘 GtCO₂'
         f'</div>',
         unsafe_allow_html=True
     )
@@ -1060,7 +1105,7 @@ with chart1:
     fig1.add_trace(
         go.Scatter(
             x=[diet_shift],
-            y=[co2_remaining],
+            y=[co2_剩餘],
             mode="markers",
             marker=dict(
                 size=13,
@@ -1075,7 +1120,7 @@ with chart1:
         showlegend=False,
         paper_bgcolor="#FAFAF7",
         plot_bgcolor="#FAFAF7",
-        xaxis_title="飲食轉型（%）",
+        xaxis_title="飲食轉型 (%)",
         yaxis_title="剩餘 GtCO₂",
         margin=dict(
             l=20,
@@ -1132,7 +1177,7 @@ with chart2:
         showlegend=False,
         paper_bgcolor="#FAFAF7",
         plot_bgcolor="#FAFAF7",
-        xaxis_title="飲食轉型（%）",
+        xaxis_title="飲食轉型 (%)",
         yaxis_title="ppm",
         margin=dict(
             l=20,
@@ -1168,11 +1213,11 @@ with impact1:
     )
     st.markdown(
         '<div style="font-size:32px; font-weight:700; color:#123047; '
-        'margin-top:12px; white-space:nowrap;">3,700 萬 km²</div>',
+        'margin-top:12px; white-space:nowrap;">37 million km²</div>',
         unsafe_allow_html=True
     )
     st.markdown(
-        '<div class="small-number">全球農業用地的 78%</div>',
+        '<div class="small-number">78% 全球農業用地</div>',
         unsafe_allow_html=True
     )
 
@@ -1193,7 +1238,7 @@ with impact2:
 
 with impact3:
     st.markdown(
-        '<div class="number-title">經濟成本降低</div>',
+        '<div class="number-title">經濟成本減少</div>',
         unsafe_allow_html=True
     )
     st.markdown(
@@ -1237,26 +1282,55 @@ with st.expander(
 
     st.markdown(
         """
-**第 3 章 — 資料與研究方法**  
-研究架構 · 資料 · 變數 · 方程式 · 自然恢復模型
+**第三章 — 資料與方法**  
+研究框架 · 資料 · 變數 · 方程式 · 自然復育模型
 
-**第 4 章 — 排放與自然的 CO₂ 吸收**  
+**第四章 — 排放與自然 CO₂ 吸收**  
 模型有效性 · 預測 · 敏感度分析 · 氣候情境
 
-**第 5 章 — 化石燃料與畜牧業的外部成本**  
-畜牧業外部性 · 能源 · 經濟成本
+**第五章 — 化石燃料與畜牧業的外部成本**  
+畜牧外部性 · 能源 · 經濟成本
 
-**第 6 章 — 化石燃料與畜牧業的 CO₂ 責任**  
+**第六章 — 化石燃料與畜牧業的 CO₂ 責任**  
 排放 · CO₂ 移除能力損失 · 能源消耗 · 土地與森林敏感度分析 · 調整後責任
 
-**第 7 章 — 應用與自然恢復模型**  
-美國 · 中國 · 全球氣候政策 · 自然恢復
+**第七章 — 應用與自然復育模型**  
+美國 · 中國 · 全球氣候政策 · 自然復育
         """
     )
 
     st.caption(
         "Detailed methodology, calculations, sensitivity analyses and "
         "underlying data are documented in the full research."
+    )
+
+# =========================
+# RESEARCH BRIEF
+# =========================
+
+st.markdown(
+    """
+### 研究簡報
+
+**淨零的地球系統核算**
+
+MY NET ZERO 研究框架的一頁摘要，包括核算邊界、氣候負擔歸因，以及從飲食轉型到恢復自然 CO₂ 移除能力的路徑。
+    """
+)
+
+with st.expander("查看研究簡報"):
+    st.image(
+        "research_brief.png",
+        use_container_width=True
+    )
+
+with open("Net_Zero_Research_Summary_QR_FIXED.pdf", "rb") as pdf_file:
+    st.download_button(
+        label="下載研究簡報（PDF）",
+        data=pdf_file,
+        file_name="MY_NET_ZERO_Research_Brief.pdf",
+        mime="application/pdf",
+        use_container_width=True
     )
 
 
@@ -1273,16 +1347,16 @@ with st.expander(
         """
 **能源 — 41%**
 
-**來源資料**  
-各肉類全球消費量 · 各肉類能源需求 · 全球人口 · 全球電力消耗
+**資料來源**  
+Global meat consumption by meat type · Energy requirements by meat type · Global population · Global electricity consumption
 
 **MY NET ZERO 計算**  
-肉類消費量 × 各肉類能源需求 × 全球人口  
-→ 估算全球肉類產業電力消耗  
-→ 與全球總電力消耗比較
+Meat consumption × energy requirement by meat type × global population  
+→ estimated global meat-industry electricity consumption  
+→ compared with total global electricity consumption
 
 **結果**  
-估算肉類產業電力消耗 = **全球電力消耗的 41%**
+Estimated meat-industry electricity consumption = **41% of global electricity consumption**
         """
     )
 
@@ -1295,47 +1369,47 @@ with st.expander(
         """
 **甲烷 — 31%**
 
-**來源資料**  
-牛隻數量 · 每頭牛年度甲烷排放
+**資料來源**  
+Cattle population · Annual methane emissions per cow
 
-**MY NET ZERO 模型假設**  
-甲烷 = **100× CO₂ 當量**，用以呈現其強烈的近期增溫影響
+**MY NET ZERO MODEL ASSUMPTION**  
+Methane = **100× CO₂-equivalent** to represent its strong near-term warming impact
 
 **MY NET ZERO 計算**  
-牛隻數量 × 每頭牛甲烷排放 × 100 CO₂ 當量  
-→ 約 **15.2 GtCO₂ 當量**
+Cattle population × methane emissions per cow × 100 CO₂-equivalent  
+→ approximately **15.2 GtCO₂-equivalent**
 
 **結果**  
-15.2 GtCO₂-eq. ÷ 全球年度排放 50 GtCO₂-eq.  
+15.2 GtCO₂-eq. ÷ 50 GtCO₂-eq. global annual emissions  
 → **≈ 31%**
         """
     )
 
     st.caption(
-        "100× 甲烷係數是 MY NET ZERO 模型假設。"
-        "它不是傳統的 100 年 GWP 係數。"
+        "The 100× methane factor is a MY NET ZERO model assumption. "
+        "It is not the conventional 100-year GWP factor."
     )
  
     st.markdown(
         """
 **土地 — 11%**
 
-**來源資料**  
-Livestock land use = **3,700 萬 km²**
+**資料來源**  
+Livestock land use = **37 million km²**
 
 **MY NET ZERO 計算**  
-3,700 萬 km² × estimated CO₂ absorption capacity of released land  
-→ 每年約 **5.17 GtCO₂**
+37 million km² × estimated CO₂ absorption capacity of released land  
+→ approximately **5.17 GtCO₂ per year**
 
 **結果**  
-5.17 GtCO₂ ÷ 全球年度排放 50 GtCO₂  
+5.17 GtCO₂ ÷ 50 GtCO₂ global annual emissions  
 → **≈ 11%**
         """
     )
 
     st.caption(
-        "The 3,700 萬 km² livestock land-use estimate is source data. "
-        "11% 指標由 MY NET ZERO 研究模型推導。"
+        "The 37 million km² livestock land-use estimate is source data. "
+        "The 11% indicator is derived by the MY NET ZERO research model."
     )
 
     st.markdown(
@@ -1343,35 +1417,35 @@ Livestock land use = **3,700 萬 km²**
 **森林 — 91%**
 
 **模型邊界**  
-採用保守估計，使用**亞馬遜國家與一個剛果盆地國家**的牛隻數量，而非全球牛隻數量
+Conservative estimate using cattle in **Amazon nations and one Congo Basin country**, rather than global cattle populations
 
 **MY NET ZERO 計算**  
-選定熱帶森林地區的牛隻數量 × 森林面積影響 × 熱帶森林估算 CO₂ 吸收能力  
-→ 每年約 **45.34 GtCO₂**
+Cattle population in the selected tropical-forest regions × forest area impact × estimated tropical-forest CO₂ absorption capacity  
+→ approximately **45.34 GtCO₂ per year**
 
 **結果**  
-45.34 GtCO₂ ÷ 全球年度排放 50 GtCO₂  
+45.34 GtCO₂ ÷ 50 GtCO₂ global annual emissions  
 → **≈ 91%**
         """
     )
 
     st.caption(
-        "森林估計刻意採用受限的熱帶森林邊界，以避免將單一 CO₂ 吸收率"
-        "套用於不同氣候區域的森林。"
-        ""
+        "The forest estimate uses a deliberately restricted tropical-forest "
+        "boundary to avoid applying one CO₂ absorption rate to forests "
+        "across different climatic regions."
     )
 
     st.markdown(
         """
 **畜牧業 CO₂ 總責任 — 166%**
 
-**能源重新分配**  
-肉類產業能源使用 = **全球電力的 41%**  
-套用於 **78% 化石燃料基準**  
+**能源重新歸因**  
+Meat-industry energy use = **41%** of global electricity  
+Applied to the **78% fossil-fuel baseline**  
 → 78% × 41% ≈ **32%**
 
 **MY NET ZERO 整合計算**  
-甲烷 **31%** + 土地 **11%** + 森林 **91%** + 能源 **32%**
+Methane **31%** + Land **11%** + Forest **91%** + Energy **32%**
 
 **結果**  
 31% + 11% + 91% + 32% ≈ **166%**
@@ -1379,8 +1453,8 @@ Livestock land use = **3,700 萬 km²**
     )
 
     st.caption(
-        "166% 是 MY NET ZERO 研究模型的整合估計，"
-        "以全球年度排放 50 GtCO₂-eq. 為基準。"
+        "The 166% result is an integrated MY NET ZERO research-model "
+        "estimate relative to the 50 GtCO₂-eq. annual global emissions baseline."
     )
 
 
@@ -1394,36 +1468,36 @@ Livestock land use = **3,700 萬 km²**
 
     st.markdown(
         """
-**CORE DATA 資料來源**
+**核心資料來源**
 
 **FAO / UNFAO**  
-畜牧、食品消費與農業土地使用資料
+Livestock, food consumption and agricultural land-use data
 
 **Energypedia**  
-食品與農業價值鏈中的能源需求
+Energy requirements within food and agricultural value chains
 
-**美國能源資訊署（EIA）**  
-全球能源與電力資料
+**U.S. Energy Information Administration (EIA)**  
+Global energy and electricity data
 
 **IPCC**  
-傳統溫室氣體核算與氣候評估架構
+Conventional greenhouse-gas accounting and climate assessment framework
         """
     )
 
     st.caption(
-        "來源資料作為輸入；計算、整合與"
-        "衍生指標由 MY NET ZERO 研究模型產生。"
+        "Source data are used as inputs. Calculations, integration and "
+        "derived indicators are produced by the MY NET ZERO research model."
     )
     st.markdown(
         """
-**VIEW ORIGINAL 資料來源**
+**查看原始資料來源**
 
-[FAO / FAOSTAT — 全球食品與農業資料](https://www.fao.org/faostat/)
+[FAO / FAOSTAT — Global Food & Agriculture Data](https://www.fao.org/faostat/)
 
-[Energypedia — 食品與農業價值鏈中的能源](https://energypedia.info/wiki/Energy_within_Food_and_Agricultural_Value_Chains)
+[Energypedia — Energy within Food and Agricultural Value Chains](https://energypedia.info/wiki/Energy_within_Food_and_Agricultural_Value_Chains)
 
-[美國能源資訊署（EIA） — Electricity Data](https://www.eia.gov/electricity/data.php)
+[U.S. Energy Information Administration (EIA) — Electricity Data](https://www.eia.gov/electricity/data.php)
 
-[Gatti 等（2021），Nature — 亞馬遜因森林砍伐與氣候變遷成為碳源](https://www.nature.com/articles/s41586-021-03629-6)
+[Gatti et al. (2021), Nature — Amazonia as a carbon source linked to deforestation and climate change](https://www.nature.com/articles/s41586-021-03629-6)
         """
     )
