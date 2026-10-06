@@ -153,8 +153,12 @@ st.markdown(
     'GNPA'
     '</div>'
     '<div style="font-size:14px; font-weight:600; color:#123047; '
-    'letter-spacing:1.6px; text-transform:uppercase; margin-bottom:34px;">'
-    'Global Nature & Plant-based 飲食轉型 Agency'
+    'letter-spacing:1.6px; text-transform:uppercase; margin-bottom:5px;">'
+    'Global Nature & Plant-based Diet Shift Agency'
+    '</div>'
+    '<div style="font-size:13px; font-weight:500; color:#68757D; '
+    'letter-spacing:0.5px; margin-bottom:34px;">'
+    '全球自然與植物性飲食轉型總署'
     '</div>',
     unsafe_allow_html=True
 )
